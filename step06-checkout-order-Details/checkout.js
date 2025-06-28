@@ -64,3 +64,4 @@ const finalPrice = totalPrice * 0.95;
 console.log("Final price : " + finalPrice);
 const canBuy = balance >= finalPrice;
 console.log("Can buy : " + canBuy);
+const message = canBuy ? "Great you can buy these products" : "Sorry u cant";
