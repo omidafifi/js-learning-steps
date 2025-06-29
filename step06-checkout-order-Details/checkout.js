@@ -77,18 +77,44 @@
 7. Log whether the user can buy the items or not using a ternary operator.
 8. Use a logical AND (&&) to log "✅ Purchase complete" only if final price is defined AND user has enough money.
 */
+// const product1 = 43;
+// const product2 = 17; //=>twice
+// const product3 = 23;
+// const usersBalance = 35;
+
+// const totalPrice = product1 + product2 * 2 + product3;
+// console.log(totalPrice);
+// const finalPrice = totalPrice > 100;
+// console.log(finalPrice ? "truhy" : "falsy");
+// console.log(usersBalance === finalPrice);
+// if (usersBalance) {
+//   console.log("Null");
+// }
+// console.log("✅ Purchase complete" && finalPrice);
+// 5 /8
+// ✅ تمرین شماره ۱: ترکیب عملگرها و منطق در خرید آنلاین
+
+/*
+۱. سه متغیر عددی تعریف کن که قیمت سه محصول مختلف رو نگه‌داری می‌کنن.
+۲. فرض کن یکی از این محصولات دوبار خریداری شده. مجموع قیمت‌ها رو قبل از تخفیف محاسبه کن.
+۳. اگر مجموع قیمت‌ها بیشتر از ۱۰۰ بود، با استفاده از عملگر ترکیبی، یک تخفیف ۱۵٪ اعمال کن.
+۴. بررسی کن که آیا قیمت نهایی (finalPrice) مقدار truthy داره یا نه.
+۵. موجودی حساب کاربر (balance) رو تعریف کن و با قیمت نهایی مقایسه کن.
+۶. اگر موجودی تعریف نشده بود (null یا undefined)، با استفاده از nullish operator یک مقدار پیش‌فرض براش تعیین کن.
+۷. با استفاده از عملگر شرطی (ternary)، پیامی به کاربر نشون بده که آیا می‌تونه خرید کنه یا نه.
+۸. با استفاده از عملگر منطقی &&، فقط زمانی پیام "✅ خرید با موفقیت انجام شد" رو چاپ کن که:
+   - قیمت نهایی تعریف شده باشه
+   - و موجودی کاربر برای خرید کافی باشه
+*/
+//1
 const product1 = 43;
 const product2 = 17; //=>twice
 const product3 = 23;
-const usersBalance = 35;
-
+//2
 const totalPrice = product1 + product2 * 2 + product3;
 console.log(totalPrice);
-const finalPrice = totalPrice > 100;
-console.log(finalPrice ? "truhy" : "falsy");
-console.log(usersBalance === finalPrice);
-if (usersBalance) {
-  console.log("Null");
+//3
+if (totalPrice > 100) {
 }
-console.log("✅ Purchase complete" && finalPrice);
-// 5 /8
+//4
+
