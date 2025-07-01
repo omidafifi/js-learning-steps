@@ -49,16 +49,17 @@
 // );
 
 // Turnary Oprator and Nullish Oprator
-let isLoggedIn;
+// let isLoggedIn;
 
-let username = "user",
-  password = "pass";
-console.log(username, password);
-if (username == "user" && password == "pass") {
-  isLoggedIn = true;
-} else {
-  isLoggedIn = false;
-}
-console.log(isLoggedIn);
-//==> dar inja behtare ma az Turnary Oprator estefade konim 
+// let username = "user",
+//   password = "pass";
+// console.log(username, password);
+// if (username == "user" && password == "pass") {
+//   isLoggedIn = true;
+// } else {
+//   isLoggedIn = false;
+// }
+// console.log(isLoggedIn);
+// //==> dar inja behtare ma az Turnary Oprator estefade konim
 let isLoggedIn = username == "user" && password == "pass";
+console.log(isLoggedIn);
