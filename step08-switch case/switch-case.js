@@ -24,6 +24,8 @@ if (number > 0) {
   console.log("this number is positiv");
 } else if (number < 0) {
   console.log("this number is negetiv");
-} else {
+} else if (number === 0) {
   console.log("this number is zero");
+} else {
+  console.log("final");
 }
