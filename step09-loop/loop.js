@@ -27,8 +27,8 @@
 // 	•	اگر زوج بود بنویس: X is even
 // 	•	اگر فرد بود بنویس: X is odd
 
-for (let num = 1; num <= 30; num++) {
-  if (num % 2 === 0) {
+for (let num = 0; num >= 30; num++) {
+  if (num == % 0) {
     console.log("this number is even :", num);
   } else {
     console.log("this number is odd :", num);
