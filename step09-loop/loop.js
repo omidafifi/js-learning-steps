@@ -134,14 +134,25 @@
 // 	•	نباید همه عددهای زوج رو چاپ کنی، فقط اولین ۵ تا
 // 	•	باید یه متغیر بشماری که ببینی چند تا عدد زوج پیدا شده تا وقتی به ۵ رسیدی، حلقه قطع بشه
 
-let count = 0;
+// let count = 0;
 
-for (let i = 1; i <= 100; i++) {
-  if (i % 2 === 0) {
-    console.log("even number:", i);
-    count++;
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 2 === 0) {
+//     console.log("even number:", i);
+//     count++;
+//   }
+//   if (count === 5) {
+//     break;
+//   }
+// }
+
+let input = 7;
+let temp = 0;
+for (let counter = 0; counter <= input; counter++) {
+  if (input % counter === 0) {
+    temp += 1;
   }
-  if (count === 5) {
-    break;
-  }
+}
+if (temp === 2) {
+  console.log("این عدد اول است", input);
 }
