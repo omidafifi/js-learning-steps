@@ -35,11 +35,24 @@
 //   }
 // }
 
-for (let i = 0; i <= 30; i++) {
-  if (i % 2 === 0) {
-    console.log(i, " this number is even");
-  } else if (i % 2 === 1) {
-    console.log(i, "this number is odd");
+// for (let i = 0; i <= 30; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i, " this number is even");
+//   } else if (i % 2 === 1) {
+//     console.log(i, "this number is odd");
+//   }
+// }
+// for (initialization , condition ,update ){ action to repeat }
+//بدست آوردن اعداد تام
+let input = 496;// عددی که می‌خوایم بررسی کنیم
+let temp = 0;
+
+for (let counter = 1; counter < input; counter++) {
+  if (input % counter === 0) {
+    temp += counter;
   }
 }
-// for (initialization , condition ,update ){ action to repeat }
+
+if (temp === input) {
+  console.log("perfect number:", temp);
+}
