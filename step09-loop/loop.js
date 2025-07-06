@@ -44,15 +44,26 @@
 // }
 // for (initialization , condition ,update ){ action to repeat }
 //بدست آوردن اعداد تام
-let input = 496;// عددی که می‌خوایم بررسی کنیم
-let temp = 0;
+// let input = 496;// عددی که می‌خوایم بررسی کنیم
+// let temp = 0; // اینجا می‌خوایم مجموع مقسوم‌علیه‌ها رو جمع بزنیم
 
-for (let counter = 1; counter < input; counter++) {
-  if (input % counter === 0) {
-    temp += counter;
+// for (let counter = 1; counter < input; counter++) {
+//   if (input % counter === 0) {
+//     temp += counter;
+//   }
+// }
+
+// if (temp === input) {
+//   console.log("perfect number:", temp);
+// }
+
+// ۱
+// با استفاده از یک حلقه for، عددهای بین ۱ تا ۵۰ را چاپ کن
+// و فقط عددهایی را بنویس که بر ۵ بخش‌پذیرند (یعنی i % 5 === 0)
+
+// ⸻
+for (let i = 1; i <= 50; i++) {
+  if (i % 5 === 0) {
+    console.log(i);
   }
-}
-
-if (temp === input) {
-  console.log("perfect number:", temp);
 }
