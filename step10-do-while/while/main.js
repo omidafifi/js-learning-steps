@@ -90,14 +90,14 @@
 //   }
 //   number++;
 // }
-let number = 1;
+// let number = 1;
 
-while (number <= 50) {
-  if (number % 7 === 0) {
-    console.log(number);    //==> true (richtig)
-  }
-  number++;
-}
+// while (number <= 50) {
+//   if (number % 7 === 0) {
+//     console.log(number); //==> true (richtig)
+//   }
+//   number++;
+// }
 
 // 🔴 بخش ۳: تمرین‌های do...while
 
@@ -105,8 +105,15 @@ while (number <= 50) {
 
 // با استفاده از do...while عددی مثل 0 را تا 5 چاپ کن
 // حتی اگر شرط اول اشتباه باشد.
-
-
+// let number = 0;
+// do {
+//   console.log(number <= 5); ==> false (uch hab leider falsh gemacht)
+// } while (number++);
+let number = 10;
+do {
+  console.log("number :", number);
+  number++;
+} while (number < 5);
 // ✅ تمرین 6 (مفهومی):
 
 // یک متغیر مقدارش برابر 15 است.
