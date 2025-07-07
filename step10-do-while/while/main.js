@@ -109,11 +109,11 @@
 // do {
 //   console.log(number <= 5); ==> false (uch hab leider falsh gemacht)
 // } while (number++);
-let number = 10;
-do {
-  console.log("number :", number);
-  number++;
-} while (number < 5);
+// let number = 10;
+// do {
+//   console.log("number :", number);
+//   number++; // ==> true (richtig . Acht darauf !)
+// } while (number < 5);
 // ✅ تمرین 6 (مفهومی):
 
 // یک متغیر مقدارش برابر 15 است.
@@ -121,3 +121,13 @@ do {
 // آیا چیزی چاپ میشه؟ چرا؟
 
 // ⸻
+
+let number = 15;
+do {
+  console.log("Number :", number);
+  number++;
+} while (number < 5);
+// bale chap mishe ama 1 bar ✅ بله، عدد 15 فقط یک بار چاپ می‌شود.
+
+// 📌 دلیل: در حلقه‌ی do...while، اول بدنه اجرا می‌شود، سپس شرط بررسی می‌شود.
+// بنابراین حتی اگر شرط از ابتدا غلط باشد، حداقل یک بار بدنه اجرا خواهد شد.
