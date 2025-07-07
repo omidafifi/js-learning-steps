@@ -28,7 +28,8 @@ while (counter <= 10) {
 // 🔹 حتی اگه شرط غلط باشه، حداقل یک بار اجرا میشه
 
 let index = 0;
+
 do {
-  console.log("Counter :", counter);
-  counter++;
-} while (counter <= 10);
+  console.log("Counter :", index);
+  index++;
+} while (index <= 10);
