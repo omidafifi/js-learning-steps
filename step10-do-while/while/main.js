@@ -34,24 +34,42 @@
 //   index++;
 // } while (index <= 10);
 
-for (let i = 2; i <= 20; i++) {
+// for (let i = 2; i <= 20; i++) {
+//   if (i % 2 === 0) {
+//     console.log("thus number is even :", i);
+//   } else {
+//     console.log("thus number is odd :", i);
+//   }
+// }
+
+// for (let num = 2; num <= 20; num++) {
+//   let count = 0;
+
+//   for (let i = 1; i <= num; i++) {
+//     if (num % i === 0) {
+//       count++;
+//     }
+//   }f
+
+//   if (count === 2) {
+//     console.log("عدد اول:", num);
+//   }
+// }
+
+for (num = 1; num <= 10; num++) {
+  console.log("num :", num);
+}
+
+console.log("با استفاده از for، مجموع تمام عددهای فرد بین ۱ تا ۲۵ را حساب کن.");
+for (let i = 0; i <= 25; i++) {
   if (i % 2 === 0) {
-    console.log("thus number is even :", i);
+    console.log("This number is even :", i);
   } else {
-    console.log("thus number is odd :", i);
+    console.log("This number is odd :", i);
   }
 }
+//✅ تمرین 3:
 
-for (let num = 2; num <= 20; num++) {
-  let count = 0;
+// با استفاده از حلقه while، اعداد ۱۰ تا ۱ را معکوس چاپ کن.
 
-  for (let i = 1; i <= num; i++) {
-    if (num % i === 0) {
-      count++;
-    }
-  }
-
-  if (count === 2) {
-    console.log("عدد اول:", num);
-  }
-}
+while ()
