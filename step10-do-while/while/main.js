@@ -1,4 +1,5 @@
 // //do / do-while تا زمانی که
+// Add loop exercises with for, while, and do-while + prime number check & even/odd logic
 // //تا زمانی که ما اون شرط رو میدیم برقرار باشه
 // // حلقه for  مناسب وقتی تعداد دفعات تکرار از قبل مشخصه
 // //  همه چیز در یک خطه: مقدار اولیه، شرط، تغییر
@@ -56,20 +57,24 @@
 //   }
 // }
 
-for (num = 1; num <= 10; num++) {
-  console.log("num :", num);
-}
+// for (num = 1; num <= 10; num++) {
+//   console.log("num :", num);
+// }
 
-console.log("با استفاده از for، مجموع تمام عددهای فرد بین ۱ تا ۲۵ را حساب کن.");
-for (let i = 0; i <= 25; i++) {
-  if (i % 2 === 0) {
-    console.log("This number is even :", i);
-  } else {
-    console.log("This number is odd :", i);
-  }
-}
+// console.log("با استفاده از for، مجموع تمام عددهای فرد بین ۱ تا ۲۵ را حساب کن.");
+// for (let i = 0; i <= 25; i++) {
+//   if (i % 2 === 0) {
+//     console.log("This number is even :", i);
+//   } else {
+//     console.log("This number is odd :", i);
+//   }
+// }
 //✅ تمرین 3:
 
 // با استفاده از حلقه while، اعداد ۱۰ تا ۱ را معکوس چاپ کن.
 
-while ()
+let num = 10;
+while (num >= 1) {
+  console.log(num);
+  num--;
+}
