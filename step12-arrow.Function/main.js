@@ -22,3 +22,13 @@ const greetUser = (name) => {
 };
 
 greetUser("Afifi");
+
+//Arrow Function با نوشتار کوتاه‌تر (Short Syntax)
+
+// const multiply = (a, b) => {
+//   return a * b;
+// };
+const multiply = (a, b) => a * b;
+
+//
+
