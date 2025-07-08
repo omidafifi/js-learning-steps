@@ -30,5 +30,23 @@ greetUser("Afifi");
 // };
 const multiply = (a, b) => a * b;
 
-//
+//تابعی بنویس به صورت کوتاه‌ترین شکل ممکن به نام square که یک عدد بگیره و مربعش رو برگردونه
+const square = (number) => number ** 2;
+let result2 = square(5);
+console.log(result2);
 
+const greetPerson = (name) => "Hello dear " + name;
+let result3 = greetPerson("Omidreza");
+console.log(result3);
+//Local Variable Global Variable)
+let globalName = "Ali"; // متغیر عمومی
+
+function showMessage() {
+  let localMessage = "Hi"; // متغیر محلی
+  console.log(localMessage + " " + globalName);
+}
+
+showMessage(); // Hi Ali
+console.log(globalName);     // ✔️
+console.log(localMessage);   // ❌ خطا
+//feat: practice arrow functions, short syntax, and variable scopes (global vs local)
