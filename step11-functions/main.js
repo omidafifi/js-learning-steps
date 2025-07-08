@@ -82,5 +82,28 @@
 // }
 // let myMessage = sayMyName();
 // console.log(myMessage);
+// //functions
 
-//
+// function sayFullName() {
+//   return "Afifi";
+// }
+// let lastName1 = sayFullName();
+// console.log(lastName1);
+
+// function sayHelloTo(name) {
+//   return "سلام " + name + " عزیزم";
+// }
+// let firstName1 = sayHelloTo("omid");
+// console.log(firstName1);
+
+// function createProfile(name, age) {
+//   return "اسم من " + name + "است و سن من " + age + "است";
+// }
+// let info = createProfile("امیدرضا", 34);
+// console.log(info);
+
+// function createEmail(firstName, lastName) {
+//   return firstName + `.` + lastName + "@gmail.com";
+// }
+// let email = createEmail("omidreza", "afifi");
+// console.log(email);
