@@ -107,3 +107,68 @@
 // }
 // let email = createEmail("omidreza", "afifi");
 // console.log(email);
+// function checkAge(name, age) {
+//   if (age >= 18) {
+//     return name + "بالغ است";
+//   } else {
+//     return name + "بالغ نیست";
+//   }
+// }
+// let result1 = checkAge("omidreza", 34);
+// console.log(result1);
+// let result2 = checkAge("ali", 14);
+// console.log(result2);
+
+// function isEven(number) {
+//   if (number % 2 === 0) {
+//     return "this number is even ";
+//   } else {
+//     return "this number is odd ";
+//   }
+// }
+// let num1 = isEven(2);
+// console.log(num1);
+// let num2 = isEven(3);
+// console.log(num2);
+
+// یک تابع به نام isPrime بنویس که یک عدد صحیح بگیرد و بررسی کند که آیا این عدد عدد اول هست یا خیر.
+// 	•	عدد اول به عددی گفته می‌شود که فقط بر 1 و خودش بخش‌پذیر باشد.
+// 	•	اگر عدد اول بود، تابع باید مقدار "عدد اول است" را برگرداند (با return)
+// 	•	اگر عدد اول نبود، مقدار "عدد اول نیست" را برگرداند
+// 	•	اگر ورودی معتبر نبود (مثلاً عدد کمتر از 2 یا عدد نبود)، پیام "ورودی معتبر نیست" برگردانده شود
+
+// function isPrime(number) {
+//   if (number % 1 === 1) {
+//     return "این عدد اول است ";
+//   } else if (number === undefined) {
+//     return "ورودی معتبر نیست";
+//   } else {
+//     return "این عدد اول نیست ";   ==>< false 
+// }
+// let num = isPrime();
+// console.log(num);
+// let num2 = isPrime(135211);
+// console.log(num2);
+function isPrime(number) {
+  // بررسی اعتبار ورودی
+  if (typeof number !== "number" || number < 2) {
+    return "ورودی معتبر نیست";
+  }
+
+  // حلقه برای بررسی بخش‌پذیری عدد از 2 تا عدد منهای یک
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) {
+      return "این عدد اول نیست";
+    }
+  }
+
+  // اگر در حلقه هیچ بخش‌پذیری پیدا نشد، عدد اول است
+  return "این عدد اول است";
+}
+
+// تست تابع
+let num1 = isPrime(135211);
+console.log(num1);
+
+let num2 = isPrime(135213);
+console.log(num2);
