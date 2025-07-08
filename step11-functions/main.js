@@ -143,7 +143,7 @@
 //   } else if (number === undefined) {
 //     return "ورودی معتبر نیست";
 //   } else {
-//     return "این عدد اول نیست ";   ==>< false 
+//     return "این عدد اول نیست ";   ==>< false
 // }
 // let num = isPrime();
 // console.log(num);
@@ -172,3 +172,34 @@ console.log(num1);
 
 let num2 = isPrime(135213);
 console.log(num2);
+//feat: implement isPrime function with input validation and prime check logic
+//
+// Function Declaration و Function Expression
+function greet() {
+  console.log("سلام Omidreza!");
+}
+greet(); // خروجی: سلام Omidreza!
+//🔹 به این روش می‌گن Function Declaration (تعریف تابع)
+// 🔹 تابع با کلمه function شروع می‌شه و مستقیماً یک نام بهش داده می‌شه
+// 🔹 این نوع توابع hoist می‌شن (یعنی حتی قبل از خط تعریف هم می‌تونی صداشون بزنی
+const greet = function () {
+  console.log("سلام دوباره!");
+};
+greet(); // خروجی: سلام دوباره!
+// 🔹 به این می‌گیم Function Expression (تابع به‌صورت عبارت)
+// 🔹 تابع ناشناس (بدون نام) هست که داخل متغیر greet ذخیره شده
+// 🔹 این توابع hoist نمی‌شن – یعنی باید قبل از صدا زدن حتماً تعریف شده باشن
+// 🔹 معمولاً با const یا let تعریف می‌شن
+
+// ⸻
+// Declaration
+function add(a, b) {
+  return a + b;
+}
+console.log(add(2, 3)); // 5
+
+// Expression
+const multiply = function (a, b) {
+  return a * b;
+};
+console.log(multiply(2, 3)); // 6
