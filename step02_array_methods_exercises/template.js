@@ -188,36 +188,69 @@
 
 // ⸻
 
-// ❓ سؤال ۱۰:
+// // ❓ سؤال ۱۰:
 
-// اگر آرایه‌ای داشته باشیم با ۶ عنصر و بنویسیم: arr.length = 0، چه اتفاقی می‌افتد؟
+// // اگر آرایه‌ای داشته باشیم با ۶ عنصر و بنویسیم: arr.length = 0، چه اتفاقی می‌افتد؟
 
-// a) فقط مقدارها پاک می‌شوند اما ساختار می‌ماند
-// b) فقط مقدار آخر حذف می‌شود
-// .c) کل آرایه پاک می‌شود
-// d) خطا رخ می‌دهد
+// // a) فقط مقدارها پاک می‌شوند اما ساختار می‌ماند
+// // b) فقط مقدار آخر حذف می‌شود
+// // .c) کل آرایه پاک می‌شود
+// // d) خطا رخ می‌دهد
 
-//Array Pre-Assessment
+// //Array Pre-Assessment
 
-let languages = ["JavaScript", "Python", "Go"]; //Richtig
-console.log(languages.push("Rust")); //Richtig
-// languages.push("Rust");
-// console.log(languages); ==> es war besser
-// console.log(languages.slice[0]);//falsh
-console.log(languages.shift);
-console.log(languages[0]);
-console.log(languages.length); //Richtig
-// console.log(languages.push["I like"]);//falsh
-languages.forEach((lang) => {
-  console.log(
-    `I like ${"JavaScript"}`,
-    `I like ${"JavaScriPythonpt"}`,
-    `I like ${"Go"}`,
-    `I like ${"Rust"}`
-  );
-});
-console.log(languages);
-let languages1 = ["JavaScript", "Python", "Go", "Rust"];
-let shortNames = languages1.filter((lang) => lang.length < 5);
-console.log(shortNames);
-console.log(languages.includes("Python")); //Rfichtig
+// let languages = ["JavaScript", "Python", "Go"]; //Richtig
+// console.log(languages.push("Rust")); //Richtig
+// // languages.push("Rust");
+// // console.log(languages); ==> es war besser
+// // console.log(languages.slice[0]);//falsh
+// console.log(languages.shift);
+// console.log(languages[0]);
+// console.log(languages.length); //Richtig
+// // console.log(languages.push["I like"]);//falsh
+// languages.forEach((lang) => {
+//   console.log(
+//     `I like ${"JavaScript"}`,
+//     `I like ${"JavaScriPythonpt"}`,
+//     `I like ${"Go"}`,
+//     `I like ${"Rust"}`
+//   );
+// });
+// console.log(languages);
+// let languages1 = ["JavaScript", "Python", "Go", "Rust"];
+// let shortNames = languages1.filter((lang) => lang.length < 5);
+// console.log(shortNames);
+// console.log(languages.includes("Python")); //Rfichtig
+
+// let fruits = ["apple", "banana", "orange", 32, true];
+// let colors = ["red", "blue", "orange", 4, true];
+// console.log(fruits.length);
+// console.log(colors.length);
+// let arr = new Array();
+// console.log(arr);
+let arr = [1, 2, 3, 4, 5, 6];
+console.log(arr);
+const userAges = [22, 32, 54, 7, 21, 3, 22];
+let userAges1 = ["omid", "Ali"];
+console.log(userAges);
+const places = [`School`, `Restaurant`, `shop`, `university`];
+console.log(places);
+console.log(userAges1[0], places[0]);
+console.log(places.length);
+console.log(places.at(-1));
+console.log(userAges.push(44));
+console.log(userAges);
+console.log(userAges.pop());
+console.log(userAges);
+userAges.shift();
+userAges.unshift("test");
+console.log(userAges);
+
+// shift  <-                    pop ->
+//            0,1,2,3,4,5,6,7,8
+// unshift ->                  push <-
+
+console.log(userAges);
+console.log(userAges);
+console.log(userAges);
+//faghat shift va pup hast ke vaghti ma hazf mikonim mitunim un mored ro begirim
