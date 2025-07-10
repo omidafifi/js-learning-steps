@@ -11,12 +11,20 @@
 //   temp += item2;
 // }
 // console.log(temp);
-let names = ["ali", " javad ", " mohammadreza ", "erfan"];
-console.log(names);
-// names.splice(1, 2);
-// names.splice(1, 1);
-// names.splice(2, 0), "milad", "hassan";
-const middOfArray = names.length / 2;
-names.splice(middOfArray, 0, "Omid", "Reza");
-console.log(names);
-v vb v v v v v v 
+// let names = ["ali", " javad ", " mohammadreza ", "erfan"];
+// console.log(names);
+// // names.splice(1, 2);
+// // names.splice(1, 1);
+// // names.splice(2, 0), "milad", "hassan";
+// const middOfArray = names.length / 2;
+// names.splice(middOfArray, 0, "Omid", "Reza");
+// console.log(names);
+
+let userNames = [
+  "Omidrzaf@gmail.com",
+  "Zahraafifi@gmail.com",
+  "zahra.yzp@yahoo.com",
+];
+for (const item of userNames) {
+  console.log(item);
+}
