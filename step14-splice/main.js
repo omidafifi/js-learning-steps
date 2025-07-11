@@ -94,5 +94,11 @@
 // // infos.splice(2, 1 , "ghanbar");  // // ایندکس ۱ یعنی ، فقط یکی حذف کن
 // infos.splice(1, 0, "univercity");
 // console.log(infos);
+// 🧪 تمرین برات:
 
-//
+// 🔸 یه آرایه بساز به نام langs = ["HTML", "CSS", "JavaScript"]
+// 🔸 کاری کن با splice() که بین CSS و JavaScript، آیتم "React" اضافه بشه
+langs = ["HTML", "CSS", "JavaScript"];
+
+langs.splice(2, 0, "react");
+console.log(langs);
