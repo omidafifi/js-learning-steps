@@ -36,11 +36,54 @@
 // }
 // console.log(temp);
 
-let Noten = [19, 14, 20, 8, 12];
-let temp = 0;
-for (const item of Noten) {
-  temp += item;
+// let Noten = [19, 14, 20, 8, 12];
+// let temp = 0;
+// for (const item of Noten) {
+//   temp += item;
+// }
+// let avrage = temp / Noten.length;
+// console.log("مجموع اعداد", temp);
+// console.log("میانگین اعداد", avrage);
+
+// let scores = [23, 45, 74, 231, 7];
+// let temp = 0;
+// for (const element of scores) {
+//   temp += element;
+// }
+
+// let avrage = temp / scores.length;
+
+// console.log("مجموع اعداد", temp);
+// console.log("میانگین اعداد", avrage);
+
+// let scores = [23, 45, 74, 231, 7];
+// let temp = 0;
+// for (const element of scores) {
+//   temp += element;
+// }
+
+// let avrage = temp / scores.length;
+
+// console.log("مجموع اعداد", temp);
+// console.log("میانگین اعداد", avrage);
+
+// if (avrage >= 12) {
+//   console.log("“قبول” ");
+// } else {
+//   console.log("“مردود”");
+// }
+
+let scores = [23, 45, 74, 231, 7];
+let evenSum = 0;
+let oddSum = 0;
+
+for (const number of scores) {
+  if (number % 2 === 0) {
+    evenSum += number; // اگر زوج بود
+  } else {
+    oddSum += number; // اگر فرد بود
+  }
 }
-let avrage = temp / Noten.length;
-console.log("مجموع اعداد", temp);
-console.log("میانگین اعداد", avrage);
+
+console.log("مجموع اعداد زوج:", evenSum);
+console.log("مجموع اعداد فرد:", oddSum);
