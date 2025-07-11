@@ -73,17 +73,26 @@
 //   console.log("“مردود”");
 // }
 
-let scores = [23, 45, 74, 231, 7];
-let evenSum = 0;
-let oddSum = 0;
+// let scores = [23, 45, 74, 231, 7];
+// let evenSum = 0;
+// let oddSum = 0;
 
-for (const number of scores) {
-  if (number % 2 === 0) {
-    evenSum += number; // اگر زوج بود
-  } else {
-    oddSum += number; // اگر فرد بود
-  }
-}
+// for (const number of scores) {
+//   if (number % 2 === 0) {
+//     evenSum += number; // اگر زوج بود
+//   } else {
+//     oddSum += number; // اگر فرد بود
+//   }
+// }
 
-console.log("مجموع اعداد زوج:", evenSum);
-console.log("مجموع اعداد فرد:", oddSum);
+// console.log("مجموع اعداد زوج:", evenSum);
+// console.log("مجموع اعداد فرد:", oddSum);
+
+// let infos = ["omid", "ahmadi", 22, 43];
+
+// infos.splice(3, 1); // // ایندکس ۱ یعنی ، فقط یکی حذف کن
+// // infos.splice(2, 1 , "ghanbar");  // // ایندکس ۱ یعنی ، فقط یکی حذف کن
+// infos.splice(1, 0, "univercity");
+// console.log(infos);
+
+//
