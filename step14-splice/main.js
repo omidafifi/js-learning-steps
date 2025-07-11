@@ -28,10 +28,19 @@
 // // for (const item of userNames) {
 // //   console.log(item);
 // // }
-// //Sum of array elements using a loop
+//Sum of array elements using a loop
 // let noten = [10, 3, 6, 16, 13, 12, 20];
 // let temp = 0;
 // for (const itemNoten of noten) {
 //   temp += itemNoten;
 // }
 // console.log(temp);
+
+let Noten = [19, 14, 20, 8, 12];
+let temp = 0;
+for (const item of Noten) {
+  temp += item;
+}
+let avrage = temp / Noten.length;
+console.log("مجموع اعداد", temp);
+console.log("میانگین اعداد", avrage);
