@@ -146,13 +146,24 @@
 //   }
 // }
 
-let input = 7;
-let temp = 0;
-for (let counter = 0; counter <= input; counter++) {
-  if (input % counter === 0) {
-    temp += 1;
-  }
+// let input = 7;
+// let temp = 0;
+// for (let counter = 0; counter <= input; counter++) {
+//   if (input % counter === 0) {
+//     temp += 1;
+//   }
+// }
+// if (temp === 2) {
+//   console.log("این عدد اول است", input);
+// }
+// اعداد فرد و زوح
+
+for (let i = 20; i <= 30; i++) {
+  // if (i % 2 === 0) {
+  //   console.log("This number is even : ", i);
+  // } else {
+  //   console.log("This number is odd : ", i);
+  // }
+  console.log(i % 2 === 0 ? "This number is even : " : "This number is odd : " , i);
 }
-if (temp === 2) {
-  console.log("این عدد اول است", input);
-}
+
