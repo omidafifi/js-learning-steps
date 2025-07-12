@@ -186,3 +186,12 @@ console.log(user.firstname);
 console.log(user.id);
 console.log(user.age);
 console.log(user.adress.province);
+
+user.role = "user";
+user.security = {
+  userName: "admin",
+  pass: "1234",
+};
+console.log(user);
+user.age = 21;
+console.log(user);
