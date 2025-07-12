@@ -29,3 +29,4 @@ for (const code in codes) {
 
 console.log([] == []);
 console.log({} == {});
+//feat: add for...in loop examples and object key checks using 'in' operator
