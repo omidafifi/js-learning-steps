@@ -69,3 +69,13 @@ let Result = numbers.reduce((prev, curr) => {
   return prev * curr; // + - ? % ** usw .....
 });
 console.log("Reduce :", Result);
+
+// let names = "omidreza , mohammad , ali ,zahra";
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// let result = names.split(", ");
+// console.log(result);
+
+let text = "HTML, CSS, JavaScript";
+let result = text.split(", ");
+console.log(result);
