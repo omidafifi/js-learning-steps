@@ -10,3 +10,4 @@ const is = Object.keys(user);
 const is1 = Object.values(user);
 console.log(is);
 console.log(is1);
+Object.defineProperty(user , "key ")
