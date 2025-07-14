@@ -27,3 +27,4 @@ let jason1 = `{
 }`;
 let user2 = JSON.parse(jason1);
 console.log(user.name);
+//parse 
