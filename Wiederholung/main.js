@@ -163,27 +163,62 @@
 // }
 // با .every() بررسی کن آیا همه کاربران فعال هستند یا نه. اگر نه، نام کاربری کسانی که فعال نیستند را چاپ کن.
 //  inja eshtebah bud
-const users = [
-  { username: "ali", active: true },
-  { username: "sara", active: true },
-  { username: "reza", active: false },
-];
+// const users = [
+//   { username: "ali", active: true },
+//   { username: "sara", active: true },
+//   { username: "reza", active: false },
+// ];
 
-const isLoggedIn = users.every((user) => user.active === true);
-console.log("آیا همه فعال هستند؟", isLoggedIn);
+// const isLoggedIn = users.every((user) => user.active === true);
+// console.log("آیا همه فعال هستند؟", isLoggedIn);
 
-// اگر همه کاربران فعال نبودند، فقط کاربران غیرفعال را نمایش بده
-if (!isLoggedIn) {
-  console.log("کاربران غیرفعال:");
-  users.forEach((user) => {
-    // اگر کاربر active نبود، نام او را چاپ کن
-    if (!user.active) {
-      console.log("- " + user.username);
-    }
-  });
-}
-// ⸻
+// // اگر همه کاربران فعال نبودند، فقط کاربران غیرفعال را نمایش بده
+// if (!isLoggedIn) {
+//   console.log("کاربران غیرفعال:");
+//   users.forEach((user) => {
+//     // اگر کاربر active نبود، نام او را چاپ کن
+//     if (!user.active) {
+//       console.log("- " + user.username);
+//     }
+//   });
+// }
+// // ⸻یک آرایه از کاربران داریم:
+// const people = [
+//   { name: "Ali", active: true },
+//   { name: "Reza", active: true },
+//   { name: "Sara", active: false },
+// ];
 
+// const isAllActiv = people.every((person) => person.active === true);
+// console.log(isAllActiv);
+
+// if (!isAllActiv) {
+//   console.log("Die Leute sind nicht aktiv:");
+//   people.forEach((person) => {
+//     if (!person.active) {
+//       console.log("-  " + person.name, "ist nicht activ");
+//     }
+//   });
+// }
+// شما یک آرایه از کاربران دارید. هر کاربر این ویژگی‌ها را دارد:
+// const users = [
+//   { name: "ali", emailVerified: true },
+//   { name: "sara", emailVerified: false },
+//   { name: "nima", emailVerified: true },
+// ];
+
+// const isConfirmed = users.every((user) => user.emailVerified === true);
+
+// if (isConfirmed) {
+//   console.log("✅ همه کاربران تاییدشده‌اند.");
+// } else {
+//   console.log("❌ کاربر(ان) تاییدنشده:");
+//   users.forEach((user) => {
+//     if (!user.emailVerified) {
+//       console.log("- " + user.name);
+//     }
+//   });
+// }
 // تمرین ۷:
 
 // تفاوت every() و some() را در مثال زیر تحلیل کن:
@@ -200,3 +235,6 @@ if (!isLoggedIn) {
 // یک تابع areAllPositive(numbers) بنویس که یک آرایه از اعداد بگیرد و بررسی کند که آیا همه عددها مثبت‌اند یا نه. اگر نبودند، بنویسد: “اعداد منفی وجود دارد”.
 
 // ⸻
+
+// commit message:
+// fix: corrected user email verification check using every() and forEach()
