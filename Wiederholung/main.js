@@ -1,3 +1,4 @@
+// feat: add fixed and extended exercises for every(), object iteration, and logical condition checks
 // // This file contains exercises reviewing the `every()` method and fixing initial conceptual errors.
 
 // // fix: corrected logical errors in array.every() exercises with proper boolean returns and typeof checks
@@ -236,5 +237,61 @@
 
 // ⸻
 
-// commit message:
-// fix: corrected user email verification check using every() and forEach()
+//
+// const users = [
+//   { name: "ali", emailVerified: true },
+//   { name: "sara", emailVerified: false },
+//   { name: "nima", emailVerified: true },
+// ];
+// const Verfi = users.every((person) => person.emailVerified === true);
+// console.log(Verfi);
+// users.forEach((element) => {
+//   if (person.emailVerified === true) {
+//     console.log("همه تایید کردن");
+//   } else {
+//     console.log("تأیید نشده ❌", element.name);
+//   }
+// // });
+// const users = [
+//     { name: "ali", emailVerified: true },
+//     { name: "sara", emailVerified: false },
+//     { name: "nima", emailVerified: true },
+//   ];
+
+//   // آیا همه تایید شده‌اند؟
+//   const Verfi = users.every((person) => person.emailVerified === true);
+//   console.log("آیا همه تاییدشده‌اند؟", Verfi);
+
+//   if (Verfi) {
+//     console.log("✅ همه تایید کرده‌اند.");
+//   } else {
+//     console.log("❌ کاربرانی که تایید نکرده‌اند:");
+//     users.forEach((element) => {
+//       if (!element.emailVerified) {
+//         console.log("- " + element.name);
+//       }
+//     });
+//   }
+// const users = [
+//   { name: "Omid", active: true },
+//   { name: "Ali", active: true },
+//   { name: "Sara", active: false },
+// ];
+// const result = users.every((isActiv) => isActiv === true);
+// console.log(result);
+
+// users.forEach((user) => {
+//   if (!result) {
+//     console.log(user.name);
+//   }
+// });
+
+let user = {
+  firstName: "omidreza",
+  lastName: "afifi",
+  age: 34,
+};
+for (const key in user) {
+  console.log(key);
+  console.log(user[key]);
+}
