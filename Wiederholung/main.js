@@ -424,3 +424,50 @@
 //     }
 //   });
 // }
+// const files = [
+//   { name: "project.docx", size: 250 },
+//   { name: "image.png", size: 0 },
+//   { name: "presentation.pptx", size: 1200 },
+// ];
+
+// //	1.	با متد .every() بررسی کن که آیا همه فایل‌ها حجم بالاتر از 0 دارند؟
+// // 2.	اگر همه فایل‌ها دارای حجم بودند، پیام زیر را در کنسول چاپ کن:
+// const RESULT = files.every((item) => item.size > 0);
+// console.log(RESULT);
+
+// if (item.size <= 0) {
+//   console.log("✅ همه فایل‌ها دارای حجم معتبر هستند.");
+// }
+// // 3.	اگر حتی یک فایل حجم 0 داشت، پیام زیر را چاپ کن:
+// // ❌ فایل(هایی) با حجم صفر یافت شد:
+// // files.forEach((element) => {
+// //   if (element.size === 0) {
+// //     console.log("✅ همه فایل‌ها دارای حجم معتبر هستند.");
+// //   }
+// // });
+// files.forEach((element) => {
+//   if (element.size === 0) {
+//     console.log("❌ فایل(هایی) با حجم صفر یافت شد:", element.name);
+//   }
+// });
+// // و سپس با .forEach() نام (name) فایل‌هایی که حجمشان صفر است را نمایش بده.
+// const files = [
+//   { name: "project.docx", size: 250 },
+//   { name: "image.png", size: 0 },
+//   { name: "presentation.pptx", size: 1200 },
+// ];
+
+// const RESULT = files.every((item) => item.size > 0);
+// console.log("آیا همه فایل‌ها حجم معتبر دارند؟", RESULT);
+
+// if (RESULT) {
+//   console.log("✅ همه فایل‌ها دارای حجم معتبر هستند.");
+// } else {
+//   console.log("❌ فایل(هایی) با حجم صفر یافت شد:");
+//   files.forEach((element) => {
+//     if (element.size === 0) {
+//       console.log("- " + element.name);
+//     }
+//   });
+// }
+//feat: add file size validation using every() with conditional listing of empty files
