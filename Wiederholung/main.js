@@ -385,3 +385,42 @@
 //     console.log("❌ سفارش انجام‌نشده:", order.id);
 //   }
 // });
+
+// const products = [
+//   { id: 101, price: 50, inStock: true },
+//   { id: 102, price: 30, inStock: true },
+//   { id: 103, price: 0, inStock: false },
+// ];
+// // 1.	با متد .every() بررسی کن آیا "همه‌ی" محصولات "قیمت" "بالاتر" از "0" دارند؟
+// // 2.	"اگر" "همه" "قیمت" "بالاتر" از "0" داشتند، پیام "✅ همه محصولات قیمت دارند." را چاپ کن.
+// // 3.	اگر حتی یک محصول قیمتش 0 یا کمتر بود، پیام "❌ محصول(های) بدون قیمت یافت شد:" را چاپ کن و سپس با .forEach() شناسه (id) محصولات بدون قیمت را چاپ کن.
+// let result = products.every((pr) => pr.price > 0);
+// console.log(result); // 1.Done
+
+// products.forEach((element) => {
+//   if (!element.price) {
+//     console.log("✅ همه محصولات قیمت دارند.");
+//   } else {
+//     console.log("❌محصول(های) بدون قیمت یافت شد", element.id);
+//   }
+// });
+// fix: correct price check logic and conditional messaging for products with missing price
+// const products = [
+//   { id: 101, price: 50, inStock: true },
+//   { id: 102, price: 30, inStock: true },
+//   { id: 103, price: 0, inStock: false },
+// ];
+
+// let result = products.every((pr) => pr.price > 0);
+// console.log(result); // ✅ فقط true یا false
+
+// if (result) {
+//   console.log("✅ همه محصولات قیمت دارند.");
+// } else {
+//   console.log("❌ محصول(های) بدون قیمت یافت شد:");
+//   products.forEach((element) => {
+//     if (element.price <= 0) {
+//       console.log("- ID:", element.id);
+//     }
+//   });
+// }
