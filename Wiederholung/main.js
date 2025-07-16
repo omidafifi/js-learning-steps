@@ -1,7 +1,4 @@
-// feat: add fixed and extended exercises for every(), object iteration, and logical condition checks
-// // This file contains exercises reviewing the `every()` method and fixing initial conceptual errors.
-
-// // fix: corrected logical errors in array.every() exercises with proper boolean returns and typeof checks
+// feat: structure every() exercises with clear start/end markers for better learning and review
 
 // // //for in ==> ich habe falsh gemacht und habe 3 Fehler
 // // // const USER = {
