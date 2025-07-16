@@ -518,3 +518,11 @@
 // const validComments = comments.filter((comment) => comment !== "");
 // console.log("تعداد نظرات معتبر:", validComments.length);
 // // fix: correct filter + length syntax to count valid (non-empty) comments
+
+const messages = ["سلام", "", "درود", " ", "", "تشکر"];
+// با filter() آرایه‌ای بساز که فقط پیام‌هایی که خالی نیستند و فقط فاصله (space) هم نیستند در آن باقی بمانند.
+// سپس تعداد این پیام‌های معتبر را با .length چاپ کن.
+const newMessages = messages.filter((str) => str.trim() !== "");
+console.log(newMessages);
+console.log(newMessages.length);
+//feat: filter non-empty, non-whitespace strings and count valid messages
