@@ -296,6 +296,31 @@
 // feat: add exercise to check all users emailVerified using every() with conditional messaging
 // یک آرایه به نام temperatures داریم که شامل دمای روزهای یک هفته است.
 // بررسی کن که آیا همه دماها بیشتر از صفر هستند یا نه.
-const temperatures = [5, 12, 8, 14, 0, 7, 10];
-const result = temperatures.every((item) => item > 0);
-console.log(result);
+// const temperatures = [5, 12, 8, 14, 0, 7, 10];
+// const result = temperatures.every((item) => item > 0);
+// console.log(result);
+// feat: add customer payment check using every() and forEach to log unpaid users
+const customers = [
+  { name: "Mehdi", hasPaid: true },
+  { name: "Zahra", hasPaid: false },
+  { name: "Reza", hasPaid: true },
+];
+
+// 1.	بررسی کن آیا همه کاربران پرداخت خودشون رو انجام داده‌اند
+// const alleCustomers = customers.every((hasPaid) => hasPaid === true); == ich habe das nochmal falsh gemacht .
+const alleCustomers = customers.every((customer) => customer.hasPaid === true);
+console.log(alleCustomers);
+// 2.	اگر همه پرداخت کرده بودند → پیام ✅ «همه پرداخت کرده‌اند.» را نمایش بده.
+if (alleCustomers) {
+  console.log("✅ ");
+  // 3.	اگر حتی یک نفر پرداخت نکرده بود:
+  // •	پیام ❌ نمایش بده.
+} else {
+  console.log("❌");
+}
+// •	نام کسانی که پرداخت نکرده‌اند را بنویس.
+customers.forEach((customers) => {
+  if (!customers.hasPaid) {
+    console.log("- " + customers.name + " پرداخت نکرده است");
+  }
+});
