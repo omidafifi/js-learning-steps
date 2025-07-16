@@ -219,21 +219,36 @@
 // }
 // تمرین ۷:
 
-// تفاوت every() و some() را در مثال زیر تحلیل کن:
+// feat: complete exercise comparing every() and some() for adult age check
+const ages = [25, 18, 40, 17];
 
-// const ages = [25, 18, 40, 17];
-
+const result = ages.every((custemrs) => custemrs >= 18);
+console.log(result);
+// const result1 = ages.some((custemrs) => custemrs >= 18); fasle 
+const result1 = ages.some((age) => age < 18);
+console.log(result1);
 // // با every چک کن که آیا همه افراد بالغ هستند؟
 // // با some چک کن که آیا حداقل یک نفر نابالغ هست؟
 
 // ⸻
 
+// feat: add function areAllPositive() to check for all-positive number arrays
 // تمرین ۸:
 
 // یک تابع areAllPositive(numbers) بنویس که یک آرایه از اعداد بگیرد و بررسی کند که آیا همه عددها مثبت‌اند یا نه. اگر نبودند، بنویسد: “اعداد منفی وجود دارد”.
 
-// ⸻
+function areAllPositive(numbers) {
+  if (numbers.every((n) => n > 0)) {
+    console.log("✅ همه اعداد مثبت‌اند.");
+  } else {
+    console.log("❌ اعداد منفی وجود دارد.");
+  }
+}
 
+areAllPositive([3, 5, 8, -1]); // خروجی: ❌
+areAllPositive([2, 4, 9]);     // خروجی: ✅
+
+// ⸻
 //
 // const users = [
 //   { name: "ali", emailVerified: true },
@@ -300,27 +315,27 @@
 // const result = temperatures.every((item) => item > 0);
 // console.log(result);
 // feat: add customer payment check using every() and forEach to log unpaid users
-const customers = [
-  { name: "Mehdi", hasPaid: true },
-  { name: "Zahra", hasPaid: false },
-  { name: "Reza", hasPaid: true },
-];
+// const customers = [
+//   { name: "Mehdi", hasPaid: true },
+//   { name: "Zahra", hasPaid: false },
+//   { name: "Reza", hasPaid: true },
+// ];
 
-// 1.	بررسی کن آیا همه کاربران پرداخت خودشون رو انجام داده‌اند
-// const alleCustomers = customers.every((hasPaid) => hasPaid === true); == ich habe das nochmal falsh gemacht .
-const alleCustomers = customers.every((customer) => customer.hasPaid === true);
-console.log(alleCustomers);
-// 2.	اگر همه پرداخت کرده بودند → پیام ✅ «همه پرداخت کرده‌اند.» را نمایش بده.
-if (alleCustomers) {
-  console.log("✅ ");
-  // 3.	اگر حتی یک نفر پرداخت نکرده بود:
-  // •	پیام ❌ نمایش بده.
-} else {
-  console.log("❌");
-}
-// •	نام کسانی که پرداخت نکرده‌اند را بنویس.
-customers.forEach((customers) => {
-  if (!customers.hasPaid) {
-    console.log("- " + customers.name + " پرداخت نکرده است");
-  }
-});
+// // 1.	بررسی کن آیا همه کاربران پرداخت خودشون رو انجام داده‌اند
+// // const alleCustomers = customers.every((hasPaid) => hasPaid === true); == ich habe das nochmal falsh gemacht .
+// const alleCustomers = customers.every((customer) => customer.hasPaid === true);
+// console.log(alleCustomers);
+// // 2.	اگر همه پرداخت کرده بودند → پیام ✅ «همه پرداخت کرده‌اند.» را نمایش بده.
+// if (alleCustomers) {
+//   console.log("✅ ");
+//   // 3.	اگر حتی یک نفر پرداخت نکرده بود:
+//   // •	پیام ❌ نمایش بده.
+// } else {
+//   console.log("❌");
+// }
+// // •	نام کسانی که پرداخت نکرده‌اند را بنویس.
+// customers.forEach((customers) => {
+//   if (!customers.hasPaid) {
+//     console.log("- " + customers.name + " پرداخت نکرده است");
+//   }
+// });
