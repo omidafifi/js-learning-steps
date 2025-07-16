@@ -283,12 +283,19 @@
 //   }
 // });
 
-let user = {
-  firstName: "omidreza",
-  lastName: "afifi",
-  age: 34,
-};
-for (const key in user) {
-  console.log(key);
-  console.log(user[key]);
-}
+// let user = {
+//   firstName: "omidreza",
+//   lastName: "afifi",
+//   age: 34,
+// };
+// for (const key in user) {
+//   console.log(key);
+//   console.log(user[key]);
+// }
+// //
+// feat: add exercise to check all users emailVerified using every() with conditional messaging
+// یک آرایه به نام temperatures داریم که شامل دمای روزهای یک هفته است.
+// بررسی کن که آیا همه دماها بیشتر از صفر هستند یا نه.
+const temperatures = [5, 12, 8, 14, 0, 7, 10];
+const result = temperatures.every((item) => item > 0);
+console.log(result);
