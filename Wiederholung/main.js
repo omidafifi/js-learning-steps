@@ -590,8 +590,10 @@ let username = ["zahra", "omid", "dorna", "ali"];
 console.log(username); // dastrasi koli (1)
 // console.log(username.length);
 console.log("........................");
-for (let index = 0; index < username.length; index++) {
-  console.log(username[index]); //(2)
-  username.pop();
-  console.log(username);
+// for (let index = 0; index < username.length; index++) {
+//   console.log(username[index]); //(2)
+// }
+for (const item of username) {
+  console.log(item); 
 }
+
