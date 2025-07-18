@@ -554,16 +554,33 @@
 //   console.log(i);
 // }
 //array
-let user = [
-  "firstName", //0
-  ["userName , omid , reza, ahmad"], //1 , 2
-  "lastName", //3
-  45, //4
-  true, //5
-];
-let user2 = ["age", 23, "dorna"];
-let user3 = ["age", 2332313123, "dorna + asdadads"];
-// console.log(typeof user);
+// let user = [
+//   "firstName", //0
+//   ["userName , omid , reza, ahmad"], //1 , 2
+//   "lastName", //3
+//   45, //4
+//   true, //5
+// // ];
+// let user = ["zahra", "omid", "dorna"];
+// user.shift();
 // console.log(user);
-// console.log(user.length); // 0 , 1, 2,3  ==> 4
-console.log(user.length, "userName".length, user2 , user3); // 0 , 1, 2,3  ==> 4
+// //  [==>  , "...." , "...."   ]            [ "...." , "...." _==>  ]
+// // unshift                                   push
+// // shift                                     pop
+// //  [<==, "...." , "...."   ]              [ "...." , "...." - <== ]
+
+// // console.log(user.unshift("Gholi"));
+// user.unshiftshift("Zahra");
+// console.log(user);
+// let numbers = [1, 2, 3, 4];
+// numbers.shift();
+// console.log(numbers);
+
+let numbers = [1, 2, 3, 4]; // 4 delete az akhar
+
+// numbers.pop(); // hazfe 4
+numbers.push(5);
+numbers.push(6);
+numbers.push(7);
+console.log(numbers.at(-2));
+console.log(numbers);
