@@ -547,9 +547,23 @@
 // اما اگر عدد به ۵ رسید، حلقه باید فوراً متوقف بشه.
 // خروجی فقط باید عددهای قبل از ۵ باشه.
 
-for (let i = 1; i < 10; i++) {
-  if (i === 5) {
-    break;
-  }
-  console.log(i);
-}
+// for (let i = 1; i < 10; i++) {
+//   if (i === 5) {
+//     break;
+//   }
+//   console.log(i);
+// }
+//array
+let user = [
+  "firstName", //0
+  ["userName , omid , reza, ahmad"], //1 , 2
+  "lastName", //3
+  45, //4
+  true, //5
+];
+let user2 = ["age", 23, "dorna"];
+let user3 = ["age", 2332313123, "dorna + asdadads"];
+// console.log(typeof user);
+// console.log(user);
+// console.log(user.length); // 0 , 1, 2,3  ==> 4
+console.log(user.); // 0 , 1, 2,3  ==> 4
