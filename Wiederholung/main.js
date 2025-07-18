@@ -576,11 +576,22 @@
 // numbers.shift();
 // console.log(numbers);
 
-let numbers = [1, 2, 3, 4]; // 4 delete az akhar
+// let numbers = [1, 2, 3, 4]; // 4 delete az akhar
 
-// numbers.pop(); // hazfe 4
-numbers.push(5);
-numbers.push(6);
-numbers.push(7);
-console.log(numbers.at(-2));
-console.log(numbers);
+// // numbers.pop(); // hazfe 4
+// numbers.push(5);
+// numbers.push(6);
+// numbers.push(7);
+// console.log(numbers.at(-2));
+// console.log(numbers);
+
+let username = ["zahra", "omid", "dorna", "ali"];
+
+console.log(username); // dastrasi koli (1)
+// console.log(username.length);
+console.log("........................");
+for (let index = 0; index < username.length; index++) {
+  console.log(username[index]); //(2)
+  username.pop();
+  console.log(username);
+}
