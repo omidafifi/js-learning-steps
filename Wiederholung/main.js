@@ -585,15 +585,33 @@
 // console.log(numbers.at(-2));
 // console.log(numbers);
 
-let username = ["zahra", "omid", "dorna", "ali"];
+// let username = ["zahra", "omid", "dorna", "ali"];
 
-console.log(username); // dastrasi koli (1)
-// console.log(username.length);
-console.log("........................");
-// for (let index = 0; index < username.length; index++) {
-//   console.log(username[index]); //(2)
+// console.log(username); // dastrasi koli (1)
+// // console.log(username.length);
+// console.log("........................");
+// // for (let index = 0; index < username.length; index++) {
+// //   console.log(username[index]); //(2)
+// // }
+// for (const item of username) {
+//   console.log(item);
 // }
-for (const item of username) {
-  console.log(item); 
-}
+//splice and middofarray
+let username = [
+  "zahra",
+  "omid",
+  "dorna",
+  "ali",
+  23,
+  51,
+  "ahmad",
+  "mahmud, hossein",
+  "saeed",
+  "mozhgan",
+];
 
+// username.splice(1, 1); // fahmidi chi shod . parametre aval mige az in index be baad biya ( paramtere 2 ) ro 2 ta hazf kon
+username.splice(1, 0, "gholi");
+username.splice(1, 0, false);
+username.splice(3, 0, 34);
+username.console.log(username);
