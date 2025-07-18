@@ -598,20 +598,23 @@
 // }
 //splice and middofarray
 let username = [
-  "zahra",
-  "omid",
-  "dorna",
-  "ali",
-  23,
-  51,
-  "ahmad",
-  "mahmud, hossein",
-  "saeed",
-  "mozhgan",
+  "zahra", //0
+  "omid", //1
+  "dorna", //2
+  "ali", //3
+  23, //4
+  51, //5
+  "ahmad", //6        // lenght = 10
+  "mahmud, hossein", //7
+  "saeed", //8
+  "mozhgan", //9
+  "mehran", //9
 ];
 
 // username.splice(1, 1); // fahmidi chi shod . parametre aval mige az in index be baad biya ( paramtere 2 ) ro 2 ta hazf kon
-username.splice(1, 0, "gholi");
-username.splice(1, 0, false);
-username.splice(3, 0, 34);
-username.console.log(username);
+// username.splice(1, 0, "gholi");
+// username.splice(1, 0, false);
+// username.splice(3, 0, 34);
+let middofarray = username.length / 2;
+username.splice(middofarray, 0, "ya hossein");
+console.log(username);
