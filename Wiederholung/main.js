@@ -566,4 +566,4 @@ let user3 = ["age", 2332313123, "dorna + asdadads"];
 // console.log(typeof user);
 // console.log(user);
 // console.log(user.length); // 0 , 1, 2,3  ==> 4
-console.log(user.); // 0 , 1, 2,3  ==> 4
+console.log(user.length, "userName".length, user2 , user3); // 0 , 1, 2,3  ==> 4
