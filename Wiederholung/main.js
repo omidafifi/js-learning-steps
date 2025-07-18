@@ -526,3 +526,12 @@ const newMessages = messages.filter((str) => str.trim() !== "");
 console.log(newMessages);
 console.log(newMessages.length);
 //feat: filter non-empty, non-whitespace strings and count valid messages
+
+for (let i = 1; i <= 5; i++) {
+    if (i < 3) {
+      console.log(i);
+    } else {
+      // هیچ کاری نمی‌کنیم یا حلقه دستی قطع بشه
+      i = 6; // حلقه قطع می‌شه چون i > 5 میشه
+    }
+  }
