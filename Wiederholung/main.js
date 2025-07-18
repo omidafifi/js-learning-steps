@@ -519,19 +519,27 @@
 // console.log("تعداد نظرات معتبر:", validComments.length);
 // // fix: correct filter + length syntax to count valid (non-empty) comments
 
-const messages = ["سلام", "", "درود", " ", "", "تشکر"];
-// با filter() آرایه‌ای بساز که فقط پیام‌هایی که خالی نیستند و فقط فاصله (space) هم نیستند در آن باقی بمانند.
-// سپس تعداد این پیام‌های معتبر را با .length چاپ کن.
-const newMessages = messages.filter((str) => str.trim() !== "");
-console.log(newMessages);
-console.log(newMessages.length);
-//feat: filter non-empty, non-whitespace strings and count valid messages
+// const messages = ["سلام", "", "درود", " ", "", "تشکر"];
+// // با filter() آرایه‌ای بساز که فقط پیام‌هایی که خالی نیستند و فقط فاصله (space) هم نیستند در آن باقی بمانند.
+// // سپس تعداد این پیام‌های معتبر را با .length چاپ کن.
+// const newMessages = messages.filter((str) => str.trim() !== "");
+// console.log(newMessages);
+// console.log(newMessages.length);
+// //feat: filter non-empty, non-whitespace strings and count valid messages
 
-for (let i = 1; i <= 5; i++) {
-    if (i < 3) {
-      console.log(i);
-    } else {
-      // هیچ کاری نمی‌کنیم یا حلقه دستی قطع بشه
-      i = 6; // حلقه قطع می‌شه چون i > 5 میشه
-    }
+// for (let i = 1; i <= 5; i++) {
+//   if (i < 3) {
+//     console.log(i);
+//   } else {
+//     // هیچ کاری نمی‌کنیم یا حلقه دستی قطع بشه
+//     i = 6; // حلقه قطع می‌شه چون i > 5 میشه
+//   }
+// }
+// یک حلقه بنویس که اعداد ۱ تا ۵ رو بررسی کنه.
+// اما اگر عدد ۳ بود، اون رو چاپ نکنه و بره عدد بعدی.
+for (let i = 1; i < 5; i++) {
+  if (i === 3) {
+    continue;
   }
+  console.log(i);
+}
