@@ -659,7 +659,11 @@
 // console.log(numbers);
 
 //slices method
-let numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-let numbers2 = [14, 16, 16, 17, 18, 19, 20, 21, 22, 23, 24];
-let numContcat = numbers1.concat(numbers2);
-console.log(numContcat);
+// let numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+//indexof and last indexof
+
+let users = ["omid", "dorna", "ali", 8, "zahra", "ahmad"];
+
+console.log(users.indexOf("zahra"));
+console.log(users.lastIndexOf("ahmad"));
