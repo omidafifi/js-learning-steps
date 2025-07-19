@@ -644,9 +644,9 @@
 // numbers.splice(1, 2, 100, 200);
 // console.log(numbers);
 
-let country = ["Deutschland ", "Schweiz ", " Osterreich"];
-country.shift("Deutschland");
-console.log(country);
+// let country = ["Deutschland ", "Schweiz ", " Osterreich"];
+// country.shift("Deutschland");
+// console.log(country);
 
 // let numbers = [1, 2, 3];
 // numbers.unshift(0);
@@ -658,6 +658,6 @@ console.log(country);
 // numbers.shift();
 // console.log(numbers);
 
-let numbers = [1, 2, 3, 4, 5, 6];
-numbers.splice(2, 2, 99, 100);
-console.log(numbers);
+//slices method
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+console.log(numbers.slice(5, 10));
