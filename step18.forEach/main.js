@@ -41,3 +41,7 @@ console.log("----------------");
 const animals = ["cat", "dog", "rabbit"];
 // هر کدام از حیوانات را با forEach و Arrow Function چاپ کن.
 animals.forEach((element) => console.log(element));
+// let names = ["Omidreza", "hassan", " Mohammad"];
+// names.forEach((element) => {
+//   console.log("سلام خدا بر :", element);
+// });

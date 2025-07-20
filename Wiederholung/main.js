@@ -663,7 +663,15 @@
 
 //indexof and last indexof
 
-let users = ["omid", "dorna", "ali", 8, "zahra", "ahmad"];
+// let users = ["omid", "dorna", "ali", 8, "zahra", "ahmad"];
 
-console.log(users.indexOf("zahra"));
-console.log(users.lastIndexOf("ahmad"));
+// console.log(users.indexOf("zahra"));
+// console.log(users.lastIndexOf("ahmad"));
+console.log("--------------");
+
+for (let i = 0; i <= 5; i++) {
+  if (i === 3) {
+    continue;
+  }
+  console.log(i);
+}
