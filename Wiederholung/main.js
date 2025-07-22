@@ -667,11 +667,19 @@
 
 // console.log(users.indexOf("zahra"));
 // console.log(users.lastIndexOf("ahmad"));
-console.log("--------------");
 
-for (let i = 0; i <= 5; i++) {
-  if (i === 3) {
-    continue;
+// for (let i = 0; i <= 5; i++) {
+//   if (i === 3) {
+//     continue;
+//   }
+//   console.log(i);
+// }
+// console.log(filterGreetings);
+console.log("--------------");
+for (let i = 0; i <= 10; i++) {
+    if (i <= 6) {
+      continue;
+    }
+    console.log(i);
   }
-  console.log(i);
-}
+

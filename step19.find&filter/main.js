@@ -14,6 +14,11 @@
 // const result1 = langs.filter((item) => item.length <= 4);
 // console.log(result);
 // console.log(result1);
-const comments = ["great!", "nice!", "", "thanks!", "perfect"];
-let filterComments = comments.filter((item) => item !== "");
-console.log(filterComments);
+// const comments = ["great!", "nice!", "", "thanks!", "perfect"];
+// let filterComments = comments.filter((item) => item !== "");
+// console.log(filterComments);
+
+let greetings = ["Danke", "Dankbar", " ", "nett von Dir", " ", ""];
+
+let filterGreetings = greetings.filter((item) => item.trim() !== "");
+console.log(filterGreetings);
