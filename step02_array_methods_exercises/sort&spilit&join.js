@@ -36,7 +36,7 @@ console.log(langs);
 
 // // // let scores = [19, 4, 21, 7, 13];
 
-// // // // اینجا کدت رو بنویس و بفرست:
+
 
 // // // scores.sort((a, b) => a - b);
 // // // console.log(scores);
