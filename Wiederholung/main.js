@@ -675,11 +675,15 @@
 //   console.log(i);
 // }
 // console.log(filterGreetings);
-console.log("--------------");
-for (let i = 0; i <= 10; i++) {
-    if (i <= 6) {
-      continue;
-    }
-    console.log(i);
-  }
+// console.log("--------------");
+// for (let i = 0; i <= 10; i++) {
+//   if (i <= 6) {
+//     continue;
+//   }
+//   console.log(i);
+// }
 
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let lastIndex = numbers.at(-1);
+console.log(lastIndex);
