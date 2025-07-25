@@ -1,4 +1,5 @@
-//Rest and Spread
+// ✅ Rest and Spread Operators in JavaScript
+// مثال Rest: همه آرگومان‌ها را در یک آرایه جمع می‌کند
 // rest Oprators
 
 function showNames(...names) {
@@ -8,6 +9,7 @@ showNames("Ali ", "Sara", "Reza");
 
 // ...names  Yaani har chi arguman hast biad berize to in array
 
+// مثال دیگر از Rest: جمع کردن تمام ورودی‌های عددی
 function sumAll(...numbers) {
   let total = 0;
   for (const n of numbers) {
@@ -18,3 +20,11 @@ function sumAll(...numbers) {
 console.log(sumAll(3, 5, 10));
 //inja tabe(function) ma har tedad adadi ke begiri ba ham jam mikone
 
+// مثال Spread: ترکیب آرایه‌ها با باز کردن اعضای arr1
+//lets go to spread Oprators :
+
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5, 6];
+console.log(arr2);
+
+//یعنی ...arr1 اعضای arr1 رو باز کرد و ریخت داخل arr2.
