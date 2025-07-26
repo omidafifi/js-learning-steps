@@ -1,4 +1,4 @@
-// Scope and IIFE
+`// Scope and IIFE
 // IIFE This word means functioni ke belafasele farakhani mishe
 
 var x = 10;
