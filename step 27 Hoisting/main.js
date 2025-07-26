@@ -9,4 +9,4 @@ function Nodejs(params) {
 }
 
  programmingLanguage = "JavaScript";
-//// ✅ Commit: Added explanation and examples for Execution Context, Scope, Scope Chain, and IIFE in JavaScript.
+//Added explanation and code examples for JavaScript Hoisting (variables and functions)
