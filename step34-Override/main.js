@@ -101,3 +101,5 @@ sag2.sedaaBedeh();
 
 // const child = new Child();
 // child.showMessage(); // اینجا متد override شده
+
+// "Add example of method overriding in JavaScript classes"
