@@ -27,7 +27,8 @@ class Employee extends Human {
   }
 
   goToWork() {
-    console.log(`this ${this.fullName} -this${this.walk}`);
+    console.log(`This is ${this.fullName} going to work...`);
+    this.walk();
   }
 }
 const employee = new Employee("omidreza", 2280993929, 34, "male");
