@@ -1,4 +1,4 @@
-`// Scope and IIFE
+// Scope and IIFE
 // IIFE This word means functioni ke belafasele farakhani mishe
 
 var x = 10;
@@ -15,4 +15,4 @@ let z = 5;
 }
 console.log(z);
 
-//// ✅ Commit: Added explanation and examples for Execution Context, Scope, Scope Chain, and IIFE in JavaScript.
+//Added explanation and examples for Execution Context, Scope, Scope Chain, and IIFE in JavaScript.
