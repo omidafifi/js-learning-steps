@@ -28,3 +28,10 @@ const arr2 = [...arr1, 4, 5, 6];
 console.log(arr2);
 
 //یعنی ...arr1 اعضای arr1 رو باز کرد و ریخت داخل arr2.
+
+// demonstrate usage of Rest and Spread operators in JavaScript
+
+// - Implemented `showNames` function using Rest operator to collect arguments into an array
+// - Created `sumAll` function to sum any number of numeric arguments via Rest operator
+// - Used Spread operator to merge arrays by spreading elements of one array into another
+// - Added explanatory comments for better code understanding
