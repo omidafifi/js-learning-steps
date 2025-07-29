@@ -46,4 +46,4 @@ animals.forEach((element) => console.log(element));
 //   console.log("سلام خدا بر :", element);
 // });
 
-//End 
+//End .
