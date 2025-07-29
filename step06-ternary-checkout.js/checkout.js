@@ -118,3 +118,4 @@ if (totalPrice > 100) {
 }
 //4
 
+//Ternary Operators practic
