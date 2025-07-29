@@ -9,22 +9,21 @@
 // });
 
 // console.log(promise); //=> pending
-// promise.then(() => console.log("دوم اجرا شود")); //=> fullfilled
-// promise.catch(() => console.log("با خطا روبه رو شدیم"));==>rejected
+// // promise.then(() => console.log("دوم اجرا شود")); //=> fullfilled
+// // promise.catch(() => console.log("با خطا روبه رو شدیم"));==>rejected
 
-const random = new Promise((resolve, reject) => {
-  console.log("Start rund");
+const randomNumber = new Promise((resolve, reject) => {
   setTimeout(() => {
-    const randomeNumber = Math.random();
-    if (randomeNumber < 0.2) {
-      console.log("Succces", randomeNumber);
+    const randomNumber = Math.random; //randomnumber forgot and Math.random 
+    if (randomNumber < 20) {
       resolve();
+      console.log("عدد :", randomNumber);
     } else {
-      console.log("Rejected :", randomeNumber);
       reject();
+      console.log("عدد :", randomNumber);
     }
   }, 2000);
 });
 
-random.then(() => console.log("Success end"));
-random.catch(() => console.log("Reject End"));
+randomNumber.then(() => console.log("succesed")); // ""
+randomNumber.catch(() => console.log("rejected"));// ""
