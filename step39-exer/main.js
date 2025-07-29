@@ -8,5 +8,6 @@ const promise = new Promise((resolve, reject) => {
   }, 1000);
 });
 
+console.log(promise);
 // promise.then(() => console.log("دوم اجرا شود"));
-promise.catch(() => console.log("با خطا روبه رو شدیم"));
+// promise.catch(() => console.log("با خطا روبه رو شدیم"));
