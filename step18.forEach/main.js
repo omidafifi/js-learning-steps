@@ -45,3 +45,5 @@ animals.forEach((element) => console.log(element));
 // names.forEach((element) => {
 //   console.log("سلام خدا بر :", element);
 // });
+
+//End 
