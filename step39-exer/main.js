@@ -14,16 +14,17 @@
 
 const randomNumber = new Promise((resolve, reject) => {
   setTimeout(() => {
-    const randomNumber = Math.random; //randomnumber forgot and Math.random 
+    const randomNumber = Math.random; //randomnumber forgot and Math.random
     if (randomNumber < 20) {
-      resolve();
-      console.log("عدد :", randomNumber);
+      resolve(randomNumber);
+      // console.log("عدد :", randomNumber);
     } else {
-      reject();
-      console.log("عدد :", randomNumber);
+      reject("An Error Ocured");
+      // console.log("عدد :", randomNumber);
     }
   }, 2000);
 });
 
-randomNumber.then(() => console.log("succesed")); // ""
-randomNumber.catch(() => console.log("rejected"));// ""
+randomNumber
+  .then((result) => console.log(result).then((num) => num * 10))
+  .catch((error) => console.log(error)); // ""
