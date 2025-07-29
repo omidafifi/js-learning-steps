@@ -23,4 +23,4 @@ let greetings = ["Danke", "Dankbar", " ", "nett von Dir", " ", ""];
 let filterGreetings = greetings.filter((item) => item.trim() !== "");
 console.log(filterGreetings);
 
-//End 
+//End .
