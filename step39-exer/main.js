@@ -18,3 +18,5 @@ randomNumber
   .catch((error) => {
     console.log("Error", error);
   });
+// //- Changed `.then(resolve)` to `.then(result)` to avoid confusion with the Promise resolve function.
+// - Fixed typos: "Succes" → "Success" and "Eror" → "Error"
