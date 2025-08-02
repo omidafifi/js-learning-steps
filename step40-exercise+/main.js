@@ -49,3 +49,69 @@ async function fetchUsers() {
       console.error("🛑 Caught error:", error.message);
     }
   }
+
+  function boilWater() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("Boiled water");
+      }, 2000); // takes time!
+    });
+  }
+  
+  function addTeaBag(water) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(`${water} + Tea bag added`);
+      }, 1000);
+    });
+  }
+  
+  async function makeTea() {
+    const hotWater = await boilWater();        // Waits until water is boiled
+    const teaReady = await addTeaBag(hotWater); // Waits until tea bag is added
+    console.log("Your tea is ready:", teaReady);
+  }
+  
+  makeTea();
+
+  function orderPizza() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("Pizza 🍕 is here");
+      }, 3000);
+    });
+  }
+  
+  async function eatDinner() {
+    console.log("Ordering pizza...");
+    const pizza = await orderPizza(); // Waits for the pizza
+    console.log("Eating:", pizza);
+  }
+  
+  eatDinner();
+
+
+  function washClothes() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("Clothes are washed");
+      }, 2000);
+    });
+  }
+  
+  function dryClothes() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("Clothes are dried");
+      }, 1000);
+    });
+  }
+  
+  async function doLaundry() {
+    const washed = await washClothes();
+    console.log(washed);
+    const dried = await dryClothes();
+    console.log(dried);
+  }
+  
+  doLaundry();
