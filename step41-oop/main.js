@@ -80,3 +80,34 @@ let newObject = {
 console.log(newObject.getFirstName());
 console.log(newObject.getLastName());
 console.log(newObject.getAge());
+//
+// یک class بساز به اسم Product که این ویژگی‌ها را داشته باشد:
+// 	•	title
+// 	•	price
+// یک متد هم به اسم getInfo که مثل این رشته برگردونه:
+// Product: Laptop - Price: 2000
+
+// سه مدل محصول بساز با قیمت مختلف
+
+class Product {
+  title1 = "laptop";
+  price1 = 2000;
+
+  title2 = "Mouse";
+  price2 = 5000;
+
+  title3 = "Keyboard";
+  price3 = 6000;
+
+  getInfo() {
+    return `Product1: ${this.title1} - Price: ${this.price1}
+    Product2: ${this.title2}- Price: ${this.price2}
+    Product3: ${this.title3} - Price: ${this.price3}`;
+  }
+}
+let item1 = new Product();
+let item2 = new Product();
+let item3 = new Product();
+console.log(item1.getInfo());
+console.log(item2.getInfo());
+console.log(item3.getInfo());
