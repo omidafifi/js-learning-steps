@@ -33,27 +33,27 @@
 // راه حل: استفاده از Class (OOP)
 // ============================================
 // ✅ با Class می‌توانیم هزاران object بسازیم بدون پر شدن حافظه
+// ✅ با این روش انعطاف بیشتری داریم
 
 class Person {
-  // Constructor: برای ساخت objectهای مختلف با مقادیر مختلف
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+  // Properties: ویژگی‌های object
+  name = "omid";
+  age = 34;
 
-  // Method: برای دریافت اطلاعات
+  // Method: متد برای دریافت اطلاعات
   getInfo() {
     return `My name: ${this.name}, Age: ${this.age}`;
   }
 }
 
 // حالا می‌توانیم هزاران object بسازیم به راحتی!
-let member1 = new Person("omid", 34);
-let member2 = new Person("ali", 30);
-let member3 = new Person("sara", 25);
+let member1 = new Person();
+let member2 = new Person();
+let member3 = new Person();
 
 console.log(member1.getInfo());
 console.log(member2.getInfo());
 console.log(member3.getInfo());
 
-// با این روش انعطاف بیشتری داریم و حافظه پر نمی‌شود!
+// در قسمت‌های بعدی constructor را یاد می‌گیریم
+// تا بتوانیم objectهای مختلف با مقادیر مختلف بسازیم
