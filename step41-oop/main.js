@@ -35,25 +35,48 @@
 // ✅ با Class می‌توانیم هزاران object بسازیم بدون پر شدن حافظه
 // ✅ با این روش انعطاف بیشتری داریم
 
-class Person {
-  // Properties: ویژگی‌های object
-  name = "omid";
-  age = 34;
+// class Person {
+//   // Properties: ویژگی‌های object
+//   name = "omid";
+//   age = 34;
 
-  // Method: متد برای دریافت اطلاعات
-  getInfo() {
-    return `My name: ${this.name}, Age: ${this.age}`;
-  }
-}
+//   // Method: متد برای دریافت اطلاعات
+//   getInfo() {
+//     return `My name: ${this.name}, Age: ${this.age}`;
+//   }
+// }
 
-// حالا می‌توانیم هزاران object بسازیم به راحتی!
-let member1 = new Person();
-let member2 = new Person();
-let member3 = new Person();
+// // حالا می‌توانیم هزاران object بسازیم به راحتی!
+// let member1 = new Person();
+// let member2 = new Person();
+// let member3 = new Person();
 
-console.log(member1.getInfo());
-console.log(member2.getInfo());
-console.log(member3.getInfo());
+// console.log(member1.getInfo());
+// console.log(member2.getInfo());
+// console.log(member3.getInfo());
 
 // در قسمت‌های بعدی constructor را یاد می‌گیریم
 // تا بتوانیم objectهای مختلف با مقادیر مختلف بسازیم
+
+//یک object بساز که اسم و سن داشته باشه. یک متد هم داشته باشه که فقط اسم رو برگردونه.
+//یک object بساز که اسم و سن داشته باشه. یک متد هم داشته باشه که فقط اسم رو برگردونه.
+let newObject = {
+  firstName: "omidreza",
+  lastName: "Afifi",
+  age: 35,
+  location: "shiraz",
+
+  getFirstName: function () {
+    return `${this.firstName}`;
+  },
+  getLastName: function () {
+    return `${this.lastName}`;
+  },
+  getAge: function () {
+    return `${this.age}`;
+  },
+};
+
+console.log(newObject.getFirstName());
+console.log(newObject.getLastName());
+console.log(newObject.getAge());
