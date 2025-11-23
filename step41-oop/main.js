@@ -60,26 +60,26 @@
 
 //یک object بساز که اسم و سن داشته باشه. یک متد هم داشته باشه که فقط اسم رو برگردونه.
 //یک object بساز که اسم و سن داشته باشه. یک متد هم داشته باشه که فقط اسم رو برگردونه.
-let newObject = {
-  firstName: "omidreza",
-  lastName: "Afifi",
-  age: 35,
-  location: "shiraz",
+// let newObject = {
+//   firstName: "omidreza",
+//   lastName: "Afifi",
+//   age: 35,
+//   location: "shiraz",
 
-  getFirstName: function () {
-    return `${this.firstName}`;
-  },
-  getLastName: function () {
-    return `${this.lastName}`;
-  },
-  getAge: function () {
-    return `${this.age}`;
-  },
-};
+//   getFirstName: function () {
+//     return `${this.firstName}`;
+//   },
+//   getLastName: function () {
+//     return `${this.lastName}`;
+//   },
+//   getAge: function () {
+//     return `${this.age}`;
+//   },
+// };
 
-console.log(newObject.getFirstName());
-console.log(newObject.getLastName());
-console.log(newObject.getAge());
+// console.log(newObject.getFirstName());
+// console.log(newObject.getLastName());
+// console.log(newObject.getAge());
 //
 // یک class بساز به اسم Product که این ویژگی‌ها را داشته باشد:
 // 	•	title
@@ -89,25 +89,25 @@ console.log(newObject.getAge());
 
 // سه مدل محصول بساز با قیمت مختلف
 
-class Product {
-  title1 = "laptop";
-  price1 = 2000;
+// class Product {
+//   title1 = "laptop";
+//   price1 = 2000;
 
-  title2 = "Mouse";
-  price2 = 5000;
+//   title2 = "Mouse";
+//   price2 = 5000;
 
-  title3 = "Keyboard";
-  price3 = 6000;
+//   title3 = "Keyboard";
+//   price3 = 6000;
 
-  getInfo() {
-    return `Product1: ${this.title1} - Price: ${this.price1}
-    Product2: ${this.title2}- Price: ${this.price2}
-    Product3: ${this.title3} - Price: ${this.price3}`;
-  }
-}
-let item1 = new Product();
-let item2 = new Product();
-let item3 = new Product();
-console.log(item1.getInfo());
-console.log(item2.getInfo());
-console.log(item3.getInfo());
+//   getInfo() {
+//     return `Product1: ${this.title1} - Price: ${this.price1}
+//     Product2: ${this.title2}- Price: ${this.price2}
+//     Product3: ${this.title3} - Price: ${this.price3}`;
+//   }
+// }
+// let item1 = new Product();
+// let item2 = new Product();
+// let item3 = new Product();
+// console.log(item1.getInfo());
+// console.log(item2.getInfo());
+// console.log(item3.getInfo());

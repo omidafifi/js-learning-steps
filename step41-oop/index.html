@@ -1,23 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>تمرین OOP - JavaScript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .question-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .question-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .question-section h2::before {
+            content: "❓";
+            font-size: 1.2em;
+        }
+
+        .question-text {
+            font-size: 1.2em;
+            line-height: 1.8;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .question-text ul {
+            margin: 15px 0;
+            padding-right: 25px;
+        }
+
+        .question-text li {
+            margin: 10px 0;
+        }
+
+        .code-section {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .code-section h3 {
+            color: #4ec9b0;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .code-section h3::before {
+            content: "💻";
+            font-size: 1.2em;
+        }
+
+        .code-block {
+            background: #252526;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #3e3e42;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .code-block pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .hint {
+            background: #fff3cd;
+            border-right: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .hint h4 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .hint p {
+            color: #856404;
+            line-height: 1.6;
+        }
+
+        .topics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .topic-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .question-section, .code-section {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-      <h1 style="color: rgb(2, 120, 138)  ; font-style: italic;"> <strong> JavaScript OOP </strong>
-         <br>
-         <br>
-        <div style="color: red;"> 1.class</div>
-         <br>
-        <div style="color: green;">2.Object </div> 
-         <br>
-         <div style="color: blue;">3.properties</div>
-         <br>
-         <div style="color: rgb(134, 134, 3);">4.Methods</div>
-     
-      </h1>
-       <script src="./main.js"></script>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 JavaScript OOP</h1>
+            <p>تمرین‌های برنامه‌نویسی شی‌گرا</p>
+            <div class="topics">
+                <div class="topic-item">1. Class</div>
+                <div class="topic-item">2. Object</div>
+                <div class="topic-item">3. Properties</div>
+                <div class="topic-item">4. Methods</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- بخش سوال تمرین -->
+            <div class="question-section">
+                <h2>سوال تمرین</h2>
+                <div class="question-text">
+                    <p><strong>یک class بساز به اسم Product که این ویژگی‌ها را داشته باشد:</strong></p>
+                    <ul>
+                        <li>title (عنوان محصول)</li>
+                        <li>price (قیمت محصول)</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>یک متد هم به اسم getInfo که مثل این رشته برگردونه:</strong></p>
+                    <p style="background: rgba(255,255,255,0.3); padding: 10px; border-radius: 5px; margin-top: 10px;">
+                        Product: Laptop - Price: 2000
+                    </p>
+                    <p style="margin-top: 15px;"><strong>سه مدل محصول بساز با قیمت مختلف</strong></p>
+                </div>
+            </div>
+
+            <!-- بخش کد Backend -->
+            <div class="code-section">
+                <h3>کد Backend (JavaScript)</h3>
+                <div class="code-block">
+                    <pre id="codeDisplay">// کد شما اینجا نمایش داده می‌شود
+// فایل main.js را باز کنید و کد خود را بنویسید</pre>
+                </div>
+                <div class="hint">
+                    <h4>💡 نکته:</h4>
+                    <p>کد JavaScript شما در فایل <strong>main.js</strong> اجرا می‌شود. نتیجه را در Console مرورگر (F12) مشاهده کنید.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📚 یادگیری گام به گام JavaScript - Step 41: OOP</p>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+    <script>
+        // نمایش کد از فایل main.js (اختیاری)
+        // می‌توانید این بخش را برای نمایش خودکار کد استفاده کنید
+    </script>
 </body>
-</html> 
+</html>
