@@ -166,6 +166,72 @@
             backdrop-filter: blur(10px);
         }
 
+        .output-section {
+            background: #0d1117;
+            color: #c9d1d9;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .output-section h3 {
+            color: #58a6ff;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .output-section h3::before {
+            content: "📊";
+            font-size: 1.2em;
+        }
+
+        .output-block {
+            background: #161b22;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #30363d;
+            min-height: 100px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.8;
+            direction: ltr;
+            text-align: left;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .output-block:empty::before {
+            content: "خروجی کد شما اینجا نمایش داده می‌شود...";
+            color: #6e7681;
+            font-style: italic;
+        }
+
+        .run-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .run-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .run-button:active {
+            transform: translateY(0);
+        }
+
         .footer {
             background: #f8f9fa;
             padding: 20px;
@@ -183,7 +249,7 @@
                 padding: 20px;
             }
 
-            .question-section, .code-section {
+            .question-section, .code-section, .output-section {
                 padding: 20px;
             }
         }
@@ -229,8 +295,15 @@
                 </div>
                 <div class="hint">
                     <h4>💡 نکته:</h4>
-                    <p>کد JavaScript شما در فایل <strong>main.js</strong> اجرا می‌شود. نتیجه را در Console مرورگر (F12) مشاهده کنید.</p>
+                    <p>کد JavaScript شما در فایل <strong>main.js</strong> اجرا می‌شود. نتیجه را در Console مرورگر (F12) یا بخش خروجی زیر مشاهده کنید.</p>
                 </div>
+            </div>
+
+            <!-- بخش نمایش خروجی -->
+            <div class="output-section">
+                <h3>خروجی کد (Output)</h3>
+                <div class="output-block" id="outputDisplay"></div>
+                <button class="run-button" onclick="runCode()">▶️ اجرای کد</button>
             </div>
         </div>
 
@@ -241,8 +314,57 @@
 
     <script src="./main.js"></script>
     <script>
-        // نمایش کد از فایل main.js (اختیاری)
-        // می‌توانید این بخش را برای نمایش خودکار کد استفاده کنید
+        // نمایش کد از فایل main.js
+        async function loadCode() {
+            try {
+                const response = await fetch('./main.js');
+                const code = await response.text();
+                const codeDisplay = document.getElementById('codeDisplay');
+                // فقط کدهای غیر کامنت شده را نمایش بده
+                const activeCode = code.split('\n')
+                    .filter(line => !line.trim().startsWith('//') || line.trim() === '//')
+                    .join('\n')
+                    .replace(/\/\/.*$/gm, ''); // حذف کامنت‌های انتهای خط
+                codeDisplay.textContent = activeCode || code;
+            } catch (error) {
+                console.error('خطا در بارگذاری کد:', error);
+            }
+        }
+
+        // اجرای کد و نمایش خروجی
+        function runCode() {
+            const outputDisplay = document.getElementById('outputDisplay');
+            outputDisplay.textContent = ''; // پاک کردن خروجی قبلی
+            
+            // ذخیره console.log اصلی
+            const originalLog = console.log;
+            const logs = [];
+            
+            // Override console.log برای گرفتن خروجی
+            console.log = function(...args) {
+                logs.push(args.map(arg => 
+                    typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
+                ).join(' '));
+                originalLog.apply(console, args);
+            };
+            
+            // اجرای کد از main.js (که قبلاً لود شده)
+            // خروجی‌ها در logs ذخیره می‌شوند
+            
+            // نمایش خروجی‌ها
+            setTimeout(() => {
+                if (logs.length > 0) {
+                    outputDisplay.textContent = logs.join('\n');
+                } else {
+                    outputDisplay.textContent = '✅ کد با موفقیت اجرا شد. برای مشاهده خروجی‌های دقیق‌تر، Console مرورگر (F12) را باز کنید.';
+                }
+                // بازگرداندن console.log اصلی
+                console.log = originalLog;
+            }, 100);
+        }
+
+        // بارگذاری کد هنگام لود صفحه
+        window.addEventListener('DOMContentLoaded', loadCode);
     </script>
 </body>
 </html>

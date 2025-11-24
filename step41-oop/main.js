@@ -81,33 +81,43 @@
 // console.log(newObject.getLastName());
 // console.log(newObject.getAge());
 //
+// ============================================
+// تمرین: ساخت کلاس Product
+// ============================================
 // یک class بساز به اسم Product که این ویژگی‌ها را داشته باشد:
-// 	•	title
-// 	•	price
+// 	•	title (عنوان محصول)
+// 	•	price (قیمت محصول)
 // یک متد هم به اسم getInfo که مثل این رشته برگردونه:
 // Product: Laptop - Price: 2000
-
 // سه مدل محصول بساز با قیمت مختلف
 
-// class Product {
-//   title1 = "laptop";
-//   price1 = 2000;
+class Product {
+  // Properties: ویژگی‌های کلاس
+  title;
+  price;
 
-//   title2 = "Mouse";
-//   price2 = 5000;
+  // Constructor: برای ساخت object با مقادیر مختلف
+  constructor(title, price) {
+    this.title = title;
+    this.price = price;
+  }
 
-//   title3 = "Keyboard";
-//   price3 = 6000;
+  // Method: متد برای دریافت اطلاعات محصول
+  getInfo() {
+    return `Product: ${this.title} - Price: ${this.price}`;
+  }
+}
 
-//   getInfo() {
-//     return `Product1: ${this.title1} - Price: ${this.price1}
-//     Product2: ${this.title2}- Price: ${this.price2}
-//     Product3: ${this.title3} - Price: ${this.price3}`;
-//   }
-// }
-// let item1 = new Product();
-// let item2 = new Product();
-// let item3 = new Product();
-// console.log(item1.getInfo());
-// console.log(item2.getInfo());
-// console.log(item3.getInfo());
+// ساخت سه محصول مختلف با قیمت‌های مختلف
+let laptop = new Product("Laptop", 2000);
+let mouse = new Product("Mouse", 50);
+let keyboard = new Product("Keyboard", 100);
+
+// نمایش اطلاعات محصولات
+console.log("=".repeat(50));
+console.log("📦 لیست محصولات:");
+console.log("=".repeat(50));
+console.log(laptop.getInfo());
+console.log(mouse.getInfo());
+console.log(keyboard.getInfo());
+console.log("=".repeat(50));
