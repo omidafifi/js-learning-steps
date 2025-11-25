@@ -232,6 +232,33 @@
             transform: translateY(0);
         }
 
+        .insight-section {
+            background: #f0f4ff;
+            padding: 25px 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 1px solid #9bb8ff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            color: #0c1b33;
+        }
+
+        .insight-section h3 {
+            margin-bottom: 10px;
+            font-size: 1.4em;
+            color: #1d3b73;
+        }
+
+        .insight-section ul {
+            margin-top: 15px;
+            padding-right: 20px;
+            list-style: disc;
+            line-height: 1.8;
+        }
+
+        .insight-section li {
+            margin-bottom: 8px;
+        }
+
         .footer {
             background: #f8f9fa;
             padding: 20px;
@@ -249,7 +276,7 @@
                 padding: 20px;
             }
 
-            .question-section, .code-section, .output-section {
+            .question-section, .code-section, .output-section, .insight-section {
                 padding: 20px;
             }
         }
@@ -305,6 +332,16 @@
                 <div class="output-block" id="outputDisplay"></div>
                 <button class="run-button" onclick="runCode()">▶️ اجرای کد</button>
             </div>
+            <div class="insight-section">
+                <h3>تمرکز Backend</h3>
+                <p>برای تکمیل تمرین‌های بعدی، روی بخش‌های زیر تمرکز کن:</p>
+                <ul>
+                    <li>سازمان‌دهی کد در کلاس‌های هوشمند با استفاده از <code>constructor</code></li>
+                    <li>نوشتن متدهایی مثل <code>getInfo</code> برای ساخت رشته خروجی</li>
+                    <li>ایجاد لیست، کالکشن یا کلاس مدیریتی مثل <strong>ProductInventory</strong></li>
+                    <li>ثبت خروجی‌ها با <code>console.log</code> برای بررسی کارکرد از پشت صحنه</li>
+                </ul>
+            </div>
         </div>
 
         <div class="footer">
@@ -314,56 +351,64 @@
 
     <script src="./main.js"></script>
     <script>
-        // نمایش کد از فایل main.js
         async function loadCode() {
             try {
-                const response = await fetch('./main.js');
+                const response = await fetch(`./main.js?t=${Date.now()}`);
+                if (!response.ok) {
+                    throw new Error(response.statusText);
+                }
                 const code = await response.text();
                 const codeDisplay = document.getElementById('codeDisplay');
-                // فقط کدهای غیر کامنت شده را نمایش بده
-                const activeCode = code.split('\n')
-                    .filter(line => !line.trim().startsWith('//') || line.trim() === '//')
+                const plainCode = code
+                    .split('\n')
+                    .map(line => line.replace(/\t/g, '    '))
                     .join('\n')
-                    .replace(/\/\/.*$/gm, ''); // حذف کامنت‌های انتهای خط
-                codeDisplay.textContent = activeCode || code;
+                    .trim();
+                codeDisplay.textContent = plainCode;
             } catch (error) {
                 console.error('خطا در بارگذاری کد:', error);
             }
         }
 
-        // اجرای کد و نمایش خروجی
-        function runCode() {
+        async function runCode() {
             const outputDisplay = document.getElementById('outputDisplay');
-            outputDisplay.textContent = ''; // پاک کردن خروجی قبلی
-            
-            // ذخیره console.log اصلی
+            outputDisplay.textContent = '⏳ در حال اجرای کد...';
+
             const originalLog = console.log;
             const logs = [];
-            
-            // Override console.log برای گرفتن خروجی
-            console.log = function(...args) {
-                logs.push(args.map(arg => 
-                    typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
-                ).join(' '));
+
+            console.log = function (...args) {
+                logs.push(
+                    args
+                        .map(arg =>
+                            typeof arg === 'object'
+                                ? JSON.stringify(arg, null, 2)
+                                : String(arg)
+                        )
+                        .join(' ')
+                );
                 originalLog.apply(console, args);
             };
-            
-            // اجرای کد از main.js (که قبلاً لود شده)
-            // خروجی‌ها در logs ذخیره می‌شوند
-            
-            // نمایش خروجی‌ها
-            setTimeout(() => {
-                if (logs.length > 0) {
-                    outputDisplay.textContent = logs.join('\n');
-                } else {
-                    outputDisplay.textContent = '✅ کد با موفقیت اجرا شد. برای مشاهده خروجی‌های دقیق‌تر، Console مرورگر (F12) را باز کنید.';
+
+            try {
+                const response = await fetch(`./main.js?t=${Date.now()}`);
+                if (!response.ok) {
+                    throw new Error('خطا در بارگذاری کد: ' + response.statusText);
                 }
-                // بازگرداندن console.log اصلی
+                const code = await response.text();
+                const executor = new Function(code);
+                executor();
+            } catch (error) {
+                logs.push(`🛑 ${error.message}`);
+            } finally {
                 console.log = originalLog;
-            }, 100);
+            }
+
+            outputDisplay.textContent = logs.length
+                ? logs.join('\n')
+                : '✅ کد با موفقیت اجرا شد.';
         }
 
-        // بارگذاری کد هنگام لود صفحه
         window.addEventListener('DOMContentLoaded', loadCode);
     </script>
 </body>
