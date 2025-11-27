@@ -41,6 +41,18 @@ class ProductInventory {
     return `${currencyFormatter.format(this.getTotalValue())} تومان`;
   }
 
+  getMostExpensive() {
+    return this.products.reduce((prev, curr) =>
+      curr.price > prev.price ? curr : prev
+    );
+  }
+
+  getCheapest() {
+    return this.products.reduce((prev, curr) =>
+      curr.price < prev.price ? curr : prev
+    );
+  }
+
   printCatalog(label = "📦 کاتالوگ محصولات") {
     console.log("=".repeat(55));
     console.log(label);
@@ -63,3 +75,13 @@ const headset = Product.fromData({ title: "Headset", price: 1200000 });
 inventory.add(headset);
 console.log("محصول جدید اضافه شد:", headset.getInfo());
 console.log("کل ارزش به‌روز شده:", inventory.getTotalLabel());
+console.log("گران‌ترین محصول:", inventory.getMostExpensive().getInfo());
+console.log("ارزان‌ترین محصول:", inventory.getCheapest().getInfo());
+
+window.productInventory = inventory;
+window.productCatalogStats = {
+  productCount: inventory.products.length,
+  totalLabel: inventory.getTotalLabel(),
+  mostExpensive: inventory.getMostExpensive().getInfo(),
+  cheapest: inventory.getCheapest().getInfo(),
+};

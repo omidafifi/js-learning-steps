@@ -210,6 +210,86 @@
             font-style: italic;
         }
 
+        .inventory-section {
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #e3e6ff;
+            box-shadow: 0 10px 30px rgba(9, 30, 66, 0.08);
+        }
+
+        .inventory-section h3 {
+            color: #1d2b64;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .inventory-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+        }
+
+        .stat-card {
+            background: #f6f8ff;
+            border-radius: 12px;
+            padding: 16px;
+            border: 1px solid #d4d8ff;
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #6c7688;
+        }
+
+        .stat-value {
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        .path-section {
+            background: #fdf4ff;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #f1c2ff;
+            box-shadow: 0 10px 30px rgba(126, 58, 210, 0.12);
+        }
+
+        .path-section h3 {
+            color: #5a2b86;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .path-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .path-card {
+            background: linear-gradient(135deg, rgba(122, 55, 255, 0.12), rgba(255, 255, 255, 0.7));
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(122, 55, 255, 0.2);
+            min-height: 120px;
+        }
+
+        .path-card h4 {
+            margin-bottom: 8px;
+            color: #3e1f71;
+            font-size: 1.05em;
+        }
+
+        .path-card p {
+            color: #2d1a4c;
+            line-height: 1.6;
+        }
+
         .run-button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -332,6 +412,47 @@
                 <div class="output-block" id="outputDisplay"></div>
                 <button class="run-button" onclick="runCode()">▶️ اجرای کد</button>
             </div>
+
+            <div class="inventory-section">
+                <h3>آمار فعلی انبار</h3>
+                <div class="inventory-stats">
+                    <div class="stat-card">
+                        <p class="stat-label">تعداد محصولات</p>
+                        <p class="stat-value" id="statCount">-</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="stat-label">مجموع ارزش</p>
+                        <p class="stat-value" id="statTotal">-</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="stat-label">گران‌ترین محصول</p>
+                        <p class="stat-value" id="statExpensive">-</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="stat-label">ارزان‌ترین محصول</p>
+                        <p class="stat-value" id="statCheapest">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="path-section">
+                <h3>مسیر بعدی برای Backend</h3>
+                <div class="path-grid">
+                    <div class="path-card">
+                        <h4>کلاس‌های سازمان‌یافته</h4>
+                        <p>پرورش کلاس‌هایی با constructor برای ایجاد نمونه‌های مختلف و مدیریت state داخلی.</p>
+                    </div>
+                    <div class="path-card">
+                        <h4>متدهای کمکی</h4>
+                        <p>ساخت متدهایی مانند <code>formatPrice</code> یا <code>getInfo</code> برای پیاده‌سازی قوانین کسب‌وکار.</p>
+                    </div>
+                    <div class="path-card">
+                        <h4>مدیریت مجموعه‌ها</h4>
+                        <p>استفاده از کلاس‌های مدیریتی مثل <strong>ProductInventory</strong> برای جمع‌آوری، فیلتر و محاسبه مجموع.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="insight-section">
                 <h3>تمرکز Backend</h3>
                 <p>برای تکمیل تمرین‌های بعدی، روی بخش‌های زیر تمرکز کن:</p>
@@ -407,9 +528,20 @@
             outputDisplay.textContent = logs.length
                 ? logs.join('\n')
                 : '✅ کد با موفقیت اجرا شد.';
+            refreshInventoryStats();
+        }
+        function refreshInventoryStats() {
+            const stats = window.productCatalogStats || {};
+            document.getElementById('statCount').textContent = stats.productCount ?? '-';
+            document.getElementById('statTotal').textContent = stats.totalLabel ?? '-';
+            document.getElementById('statExpensive').textContent = stats.mostExpensive ?? '-';
+            document.getElementById('statCheapest').textContent = stats.cheapest ?? '-';
         }
 
-        window.addEventListener('DOMContentLoaded', loadCode);
+        window.addEventListener('DOMContentLoaded', () => {
+            loadCode();
+            refreshInventoryStats();
+        });
     </script>
 </body>
 </html>
