@@ -85,3 +85,5 @@ window.productCatalogStats = {
   mostExpensive: inventory.getMostExpensive().getInfo(),
   cheapest: inventory.getCheapest().getInfo(),
 };
+
+
